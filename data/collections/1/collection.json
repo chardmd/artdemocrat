@@ -1,0 +1,18 @@
+[
+  {
+    "authorId": 1,
+    "title": "Hehehehe",
+    "category": "Abstract",
+    "image": "flower.jpg",
+    "date": "1885",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  },
+  {
+    "authorId": 1,
+    "title": "Dark 13",
+    "category": "Abstract",
+    "image": "dark.jpg",
+    "date": "1990",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  }
+]
