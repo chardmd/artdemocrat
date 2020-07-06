@@ -1,11 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
 import isNil from "lodash/isNil";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 // react-bootstrap
 import { Row, Col } from "react-bootstrap";
+
+import useFeaturedArtists from "../../hooks/use-featured-artists";
 
 // styles
 import styles from "./Carousel.module.scss";
@@ -96,30 +98,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-// query-hooks
-export const useFeaturedArtists = () => {
-  const data = useStaticQuery(graphql`
-    query FeaturedArtistQuery {
-      allArtistJson(filter: { featured: { eq: true } }) {
-        nodes {
-          ..._Artist
-          smallImage: image {
-            childImageSharp {
-              small: fluid(maxWidth: 180, maxHeight: 180) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-                tracedSVG
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-  const { allArtistJson } = data;
-  const featuredArtists = allArtistJson.nodes;
-  return featuredArtists;
-};
