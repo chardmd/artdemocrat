@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "gatsby";
 
 // react-bootstrap
 import { Button } from "react-bootstrap";
 
 import styles from "./Description.module.scss";
 
-const Description = ({ authorName, category, description }) => (
+const Description = ({ authorName, category, description, artistSlug }) => (
   <div className={styles.description}>
     <div className={styles.wrapper}>
-      <strong className={styles.likes}>{authorName}</strong>
-      <strong className={styles.strong}>{category}</strong>
+      <Link to={artistSlug}>
+        <strong className={styles.authorName}>{authorName}</strong>
+      </Link>
+      <strong className={styles.category}>{category}</strong>
     </div>
     <div>{description}</div>
     <div className={styles.download}>

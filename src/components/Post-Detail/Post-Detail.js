@@ -10,7 +10,11 @@ const PostDetail = ({ collectionDetail, artist }) => {
   const { bigImage, category, description, id, title } = collectionDetail;
   const { big } = bigImage.childImageSharp;
 
-  const { authorName, smallImage } = artist;
+  const {
+    authorName,
+    smallImage,
+    fields: { artistSlug },
+  } = artist;
   const { small } = smallImage.childImageSharp;
 
   const authorAvatar = small.src;
@@ -23,6 +27,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
             authorName={authorName}
             category={category}
             description={description}
+            artistSlug={artistSlug}
           />
         </div>
       </div>
