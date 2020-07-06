@@ -4,6 +4,7 @@ import isNil from "lodash/isNil";
 import React from "react";
 
 import PostItem from "../PostItem";
+import shuffle from "../../utils/shuffle";
 
 import styles from "./Gallery.module.scss";
 
@@ -15,7 +16,7 @@ if (typeof window !== "undefined") {
 }
 
 class Gallery extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     let postsToShow = POST_TO_SHOW;
     if (typeof window !== "undefined") {
@@ -23,6 +24,7 @@ class Gallery extends React.Component {
     }
 
     this.state = {
+      shuffledCollection: shuffle(props.collection),
       showingMore: postsToShow > POST_TO_SHOW,
       postsToShow,
     };
@@ -55,17 +57,17 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { collection } = this.props;
+    const { shuffledCollection } = this.state;
 
     // check if collection is null
-    if (isNil(collection)) {
+    if (isNil(shuffledCollection)) {
       return [];
     }
 
     return (
       <div className={styles.gallery}>
         {/* posts */}
-        {chunk(collection.slice(0, this.state.postsToShow), 3).map(
+        {chunk(shuffledCollection.slice(0, this.state.postsToShow), 3).map(
           (chunk, i) => (
             <div key={`chunk-${i}`} className={styles.wrapper}>
               {chunk.map((node) => (
@@ -78,7 +80,7 @@ class Gallery extends React.Component {
             </div>
           )
         )}
-        {!this.state.showingMore && collection.length >= POST_TO_SHOW && (
+        {!this.state.showingMore && shuffledCollection.length >= POST_TO_SHOW && (
           <a
             className={styles.loadMore}
             onClick={() => {
