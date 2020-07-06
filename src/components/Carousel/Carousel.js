@@ -14,17 +14,17 @@ import styles from "./Carousel.module.scss";
 
 // carousel settings
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
-  speed: 500,
+  speed: 700,
   slidesToShow: 5,
-  slidesToScroll: 3,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 992,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 3,
+        slidesToScroll: 2,
       },
     },
     {
