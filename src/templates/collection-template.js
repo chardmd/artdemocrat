@@ -51,9 +51,8 @@ export const pageQuery = graphql`
           # thumbnails are created. This makes iterating on
           # designs effortless as we change the args
           # for the query and we get new thumbnails.
-          big: fluid(maxWidth: 640) {
-            src
-            srcSet
+          big: fluid(maxWidth: 640, maxHeight: 640) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -64,11 +63,7 @@ export const pageQuery = graphql`
       smallImage: image {
         childImageSharp {
           small: fluid(maxWidth: 50, maxHeight: 50) {
-            src
-            srcSet
-            aspectRatio
-            sizes
-            tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }

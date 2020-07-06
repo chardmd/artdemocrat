@@ -55,11 +55,7 @@ export const pageQuery = graphql`
           smallImage: image {
             childImageSharp {
               small: fluid(maxWidth: 292, maxHeight: 292) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-                tracedSVG
+                ...GatsbyImageSharpFluid
               }
             }
           }
