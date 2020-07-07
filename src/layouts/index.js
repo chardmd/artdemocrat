@@ -22,7 +22,7 @@ const Layout = ({ children, location, isModal }) => {
     isModalFlag = true;
   }
 
-  if (isModalFlag && Modal) {
+  if (isModalFlag && CustomModal) {
     return (
       <React.Fragment>
         <PageRenderer location={{ pathname: "/" }} />
