@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import * as PropTypes from "prop-types";
 import React from "react";
 import { graphql } from "gatsby";
@@ -16,8 +17,21 @@ const propTypes = {
 
 const CollectionTemplate = ({ data, location }) => {
   const { collectionDetail, artist } = data;
+
+  let isModal = false;
+  // We don't want to show the modal if a user navigates
+  // directly to a post so if this code is running on Gatsby's
+  // initial render then we don't show the modal, otherwise we
+  // do.
+  if (
+    typeof window !== "undefined" &&
+    window.___GATSBY_INITIAL_RENDER_COMPLETE
+  ) {
+    isModal = true;
+  }
+
   return (
-    <Layout location={location}>
+    <Layout location={location} isModal={isModal}>
       <SEO
         seoTitle={collectionDetail.title}
         seoDescription={collectionDetail.description}
