@@ -57,38 +57,6 @@ module.exports = {
     "gatsby-plugin-sass",
     // intercepts all local links that have not been created in React using gatsby-link
     "gatsby-plugin-catch-links",
-    // gastby modal
-    {
-      resolve: "gatsby-plugin-modal-routing",
-      options: {
-        modalProps: {
-          style: {
-            overlay: {
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.75)",
-              zIndex: 9999,
-            },
-            content: {
-              position: "absolute",
-              border: "none",
-              background: "none",
-              padding: 0,
-              top: 0,
-              bottom: 0,
-              right: 0,
-              left: 0,
-              overflow: "auto",
-              WebkitOverflowScrolling: "touch",
-            },
-          },
-          contentLabel: "Modal",
-        },
-      },
-    },
     // This plugin generates a service worker and AppShell
     // html file so the site works offline and is otherwise
     // resistant to bad networks. Works with almost any
