@@ -1,6 +1,6 @@
 @import "../../assets/variables";
 
-.modal {
+.ModuleModal {
   display: flex;
   position: relative;
   height: 100vh;
@@ -13,6 +13,20 @@
   margin: auto;
   width: 100%;
   max-width: $base-line-height * 40.25;
+}
+
+.caretLeft {
+  cursor: pointer;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.7);
+  user-select: none;
+}
+
+.caretRight {
+  cursor: pointer;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.7);
+  user-select: none;
 }
 
 .closeButton {

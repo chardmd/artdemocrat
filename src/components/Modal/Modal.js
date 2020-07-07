@@ -8,7 +8,7 @@ import mousetrap from "mousetrap";
 import * as PropTypes from "prop-types";
 import { navigate, StaticQuery, graphql } from "gatsby";
 
-import "./Modal.scss";
+import styles from "./Modal.module.scss";
 
 let posts;
 
@@ -123,19 +123,22 @@ class CustomModal extends React.Component {
               }}
               contentLabel="Modal"
             >
-              <div onClick={() => navigate("/")} className="ModuleModal">
-                <div className="wrapperBody">
+              <div onClick={() => navigate("/")} className={styles.ModuleModal}>
+                <div className={styles.wrapperBody}>
                   <CaretLeft
-                    className="caretLeft"
+                    className={styles.caretLeft}
                     onClick={(e) => this.previous(e)}
                   />
                   {this.props.children}
                   <CaretRight
-                    className="caretRight"
+                    className={styles.caretRight}
                     onClick={(e) => this.next(e)}
                   />
                 </div>
-                <Close onClick={() => navigate("/")} className="closeButton" />
+                <Close
+                  onClick={() => navigate("/")}
+                  className={styles.closeButton}
+                />
               </div>
             </Modal>
           );
