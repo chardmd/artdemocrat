@@ -5,7 +5,6 @@ import { PageRenderer } from "gatsby";
 // Load the css for the Lora font.
 import "typeface-lora";
 
-// import CustomModal from "../components/CustomModal";
 import CustomModal from "../components/Modal";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -23,7 +22,7 @@ const Layout = ({ children, location, isModal }) => {
     isModalFlag = true;
   }
 
-  if (isModalFlag && CustomModal) {
+  if (isModalFlag && Modal) {
     return (
       <React.Fragment>
         <PageRenderer location={{ pathname: "/" }} />
