@@ -18,9 +18,6 @@ const PostItem = ({ collection }) => {
     <Link
       className={styles.postItem}
       to={fields.collectionSlug}
-      state={{
-        modal: true,
-      }}
       onTouchStart={() => {
         touched = true;
       }}
