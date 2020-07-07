@@ -55,6 +55,8 @@ module.exports = {
     },
     // configure node-saas
     "gatsby-plugin-sass",
+    // intercepts all local links that have not been created in React using gatsby-link
+    "gatsby-plugin-catch-links",
     // gastby modal
     {
       resolve: "gatsby-plugin-modal-routing",
