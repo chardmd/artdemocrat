@@ -10,6 +10,7 @@ const useSiteMetadata = () => {
             siteUrl
             description
             author
+            copyright
           }
         }
       }

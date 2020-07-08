@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: siteConfig.siteUrl,
     description: siteConfig.description,
     author: siteConfig.author,
+    copyright: siteConfig.copyright,
   },
   plugins: [
     /*

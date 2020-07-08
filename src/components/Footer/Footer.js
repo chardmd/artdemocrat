@@ -1,11 +1,16 @@
 import React from "react";
 
+import useSiteMetadata from "../../hooks/use-site-metadata";
+
 import styles from "./Footer.module.scss";
 
-const Footer = () => (
-  <footer className={styles.footer}>
-    <p>&copy; Gatsby Bootstrap 2020</p>
-  </footer>
-);
+const Footer = () => {
+  const siteMetadata = useSiteMetadata();
+  return (
+    <footer className={styles.footer}>
+      <p>{siteMetadata.copyright}</p>
+    </footer>
+  );
+};
 
 export default Footer;
