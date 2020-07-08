@@ -13,7 +13,7 @@ const About = ({ location }) => (
     <SEO seoTitle="About" />
     <Container>
       <div className={styles.about}>
-        <h1>About ImageGallery</h1>
+        <h1>About</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.

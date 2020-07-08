@@ -5,5 +5,6 @@ module.exports = {
   description: "Starter template for building niche sites",
   siteUrl: "https://chardmd.com",
   author: "Gatsby Bootstrap",
+  copyright: "2020 © All rights reserved.",
   googleAnalyticsId: "UA-168810586-1",
 };
