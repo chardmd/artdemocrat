@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-bootstrap",
+  "name": "art-democrat",
   "private": true,
-  "description": "Gatsby Bootstrap",
+  "description": "Art Democrat",
   "version": "1.0.0",
   "author": "Richard Dimalanta <hello@chardmd.com>",
   "dependencies": {
