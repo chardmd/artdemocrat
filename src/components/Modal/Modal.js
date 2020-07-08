@@ -91,7 +91,10 @@ class CustomModal extends React.Component {
             posts = data.allCollectionJson.edges.map((e) => e.node.fields);
           }
           return (
-            <div onClick={() => navigate("/")} className={styles.ModuleModal}>
+            <div
+              onClick={() => navigate(this.props.closeTo)}
+              className={styles.ModuleModal}
+            >
               <div className={styles.wrapperBody}>
                 <CaretLeft
                   className={styles.caretLeft}
@@ -104,8 +107,11 @@ class CustomModal extends React.Component {
                 />
               </div>
               <Close
-                onClick={() => navigate("/")}
+                onClick={() => navigate(this.props.closeTo)}
                 className={styles.closeButton}
+                state={{
+                  noScroll: true,
+                }}
               />
             </div>
           );
