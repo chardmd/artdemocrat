@@ -130,5 +130,38 @@ module.exports = {
     // Automatically generates a _headers file and a _redirects file
     // at the root of the public folder to configure HTTP headers and redirects on Netlify.
     "gatsby-plugin-netlify",
+    // Adds support for viewing gatsby pages
+    // within modals at their gatsby defined routes.
+    {
+      resolve: "gatsby-plugin-modal-routing",
+      options: {
+        modalProps: {
+          style: {
+            overlay: {
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.75)",
+              zIndex: 9999,
+            },
+            content: {
+              position: "absolute",
+              border: "none",
+              background: "none",
+              padding: 0,
+              top: 0,
+              bottom: 0,
+              right: 0,
+              left: 0,
+              overflow: "auto",
+              WebkitOverflowScrolling: "touch",
+            },
+          },
+          contentLabel: "Modal",
+        },
+      },
+    },
   ],
 };

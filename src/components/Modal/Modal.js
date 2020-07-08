@@ -1,5 +1,4 @@
 import React from "react";
-import Modal from "react-modal";
 import CaretRight from "react-icons/lib/fa/caret-right";
 import CaretLeft from "react-icons/lib/fa/caret-left";
 import Close from "react-icons/lib/md/close";
@@ -12,11 +11,8 @@ import styles from "./Modal.module.scss";
 
 let posts;
 
-Modal.setAppElement("#___gatsby");
-
 class CustomModal extends React.Component {
   static propTypes = {
-    isOpen: PropTypes.bool,
     location: PropTypes.object.isRequired,
   };
 
@@ -53,7 +49,7 @@ class CustomModal extends React.Component {
       } else {
         nextPost = posts[currentIndex + 1];
       }
-      navigate(`${nextPost.collectionSlug}`);
+      navigate(`${nextPost.collectionSlug}`, { state: { modal: true } });
     }
   }
 
@@ -70,7 +66,7 @@ class CustomModal extends React.Component {
       } else {
         previousPost = posts[currentIndex - 1];
       }
-      navigate(`${previousPost.collectionSlug}`);
+      navigate(`${previousPost.collectionSlug}`, { state: { modal: true } });
     }
   }
 
@@ -95,52 +91,23 @@ class CustomModal extends React.Component {
             posts = data.allCollectionJson.edges.map((e) => e.node.fields);
           }
           return (
-            <Modal
-              isOpen={this.props.isOpen}
-              onRequestClose={() => navigate("/")}
-              style={{
-                overlay: {
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  backgroundColor: "rgba(0, 0, 0, 0.75)",
-                  zIndex: 9999,
-                },
-                content: {
-                  position: "absolute",
-                  border: "none",
-                  background: "none",
-                  padding: 0,
-                  top: 0,
-                  bottom: 0,
-                  right: 0,
-                  left: 0,
-                  overflow: "auto",
-                  WebkitOverflowScrolling: "touch",
-                },
-              }}
-              contentLabel="Modal"
-            >
-              <div onClick={() => navigate("/")} className={styles.ModuleModal}>
-                <div className={styles.wrapperBody}>
-                  <CaretLeft
-                    className={styles.caretLeft}
-                    onClick={(e) => this.previous(e)}
-                  />
-                  {this.props.children}
-                  <CaretRight
-                    className={styles.caretRight}
-                    onClick={(e) => this.next(e)}
-                  />
-                </div>
-                <Close
-                  onClick={() => navigate("/")}
-                  className={styles.closeButton}
+            <div onClick={() => navigate("/")} className={styles.ModuleModal}>
+              <div className={styles.wrapperBody}>
+                <CaretLeft
+                  className={styles.caretLeft}
+                  onClick={(e) => this.previous(e)}
+                />
+                {this.props.children}
+                <CaretRight
+                  className={styles.caretRight}
+                  onClick={(e) => this.next(e)}
                 />
               </div>
-            </Modal>
+              <Close
+                onClick={() => navigate("/")}
+                className={styles.closeButton}
+              />
+            </div>
           );
         }}
       />

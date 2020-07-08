@@ -31,6 +31,10 @@ const PostItem = ({ collection }) => {
           setHovering(false);
         }
       }}
+      // open modal
+      state={{
+        modal: true,
+      }}
     >
       <Card className="shadow-sm">
         <Card.Img as="div">

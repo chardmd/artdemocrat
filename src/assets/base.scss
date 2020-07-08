@@ -19,12 +19,12 @@ body {
 }
 
 /** prevent the scroll, when opening the react-modal **/
-// .ReactModal__Body--open {
-//   overflow: hidden;
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-// }
+.ReactModal__Body--open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
 
 /** removed default css outline when selecting the item in the slide **/
 .slick-slide {
