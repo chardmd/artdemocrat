@@ -62,8 +62,8 @@ function NextArrow({ className, style, onClick }) {
 const Carousel = () => {
   const featuredArtists = useFeaturedArtists();
   return (
-    <Row className={styles.carousel}>
-      <Col>
+    <Row className="ml-0 mr-0 mb-2">
+      <Col lg={12}>
         <Slider {...settings}>
           {featuredArtists.map((item, index) => {
             const {
