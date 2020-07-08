@@ -1,6 +1,6 @@
 /* eslint-disable no-confusing-arrow */
 import React from "react";
-import { PageRenderer } from "gatsby";
+import { ModalRoutingContext } from "gatsby-plugin-modal-routing";
 
 // Load the css for the Lora font.
 import "typeface-lora";
@@ -11,36 +11,24 @@ import Footer from "../components/Footer";
 
 import styles from "./Layout.module.scss";
 
-let windowWidth;
-
-const Layout = ({ children, location, isModal }) => {
-  let isModalFlag = false;
-  if (!windowWidth && typeof window !== "undefined") {
-    windowWidth = window.innerWidth;
-  }
-  if (isModal && windowWidth > 750) {
-    isModalFlag = true;
-  }
-
-  if (isModalFlag && CustomModal) {
-    return (
-      <React.Fragment>
-        <PageRenderer location={{ pathname: "/" }} />
-        <CustomModal isOpen={true} location={location}>
+const Layout = ({ children, location }) => (
+  <ModalRoutingContext.Consumer>
+    {({ modal, closeTo }) =>
+      modal ? (
+        <CustomModal location={location} closeTo={closeTo}>
           {children}
         </CustomModal>
-      </React.Fragment>
-    );
-  }
+      ) : (
+        <>
+          <Navigation />
+          <main className={styles.main} role="main">
+            {children}
+          </main>
+          <Footer />
+        </>
+      )
+    }
+  </ModalRoutingContext.Consumer>
+);
 
-  return (
-    <>
-      <Navigation />
-      <main className={styles.main} role="main">
-        {children}
-      </main>
-      <Footer />
-    </>
-  );
-};
 export default Layout;
