@@ -1,0 +1,21 @@
+@import "../../../assets/variables";
+
+.download {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: #f4f7fa;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+}
+
+.mainText {
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+.subText {
+  font-size: 0.6rem;
+  margin-bottom: 0.4rem;
+}

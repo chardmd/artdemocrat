@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 
 import Userbar from "./Userbar";
 import Description from "./Description";
+import Download from "./Download";
 
 import styles from "./Post-Detail.module.scss";
 
@@ -29,6 +30,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
             description={description}
             artistSlug={artistSlug}
           />
+          <Download />
         </div>
       </div>
       <div to={`/${id}/`} className={styles.imageWrapper}>
@@ -39,6 +41,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
       </div>
       <div className={styles.detail}>
         <Description />
+        <Download />
       </div>
     </div>
   );
