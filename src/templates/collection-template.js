@@ -57,6 +57,13 @@ export const pageQuery = graphql`
           }
         }
       }
+      originalImage: image {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
     }
     # select the artist
     artist: artistJson(authorId: { eq: $authorId }) {

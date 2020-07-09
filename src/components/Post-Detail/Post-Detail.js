@@ -8,9 +8,17 @@ import Download from "./Download";
 import styles from "./Post-Detail.module.scss";
 
 const PostDetail = ({ collectionDetail, artist }) => {
-  const { bigImage, category, description, id, title } = collectionDetail;
+  const {
+    bigImage,
+    category,
+    originalImage,
+    description,
+    id,
+    title,
+  } = collectionDetail;
   const { big } = bigImage.childImageSharp;
-  const imgSrc = big.src;
+  const { original } = originalImage.childImageSharp;
+  const originalSrc = original.src;
 
   const {
     authorName,
@@ -31,7 +39,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
             description={description}
             artistSlug={artistSlug}
           />
-          <Download imgSrc={imgSrc} />
+          <Download imgSrc={originalSrc} />
         </div>
       </div>
       <div to={`/${id}/`} className={styles.imageWrapper}>
@@ -42,7 +50,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
       </div>
       <div className={styles.detail}>
         <Description />
-        <Download imgSrc={imgSrc} />
+        <Download imgSrc={originalSrc} />
       </div>
     </div>
   );
