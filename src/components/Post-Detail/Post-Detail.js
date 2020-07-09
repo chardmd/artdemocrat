@@ -18,7 +18,6 @@ const PostDetail = ({ collectionDetail, artist }) => {
   } = collectionDetail;
   const { big } = bigImage.childImageSharp;
   const { original } = originalImage.childImageSharp;
-  const originalSrc = original.src;
 
   const {
     authorName,
@@ -39,7 +38,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
             description={description}
             artistSlug={artistSlug}
           />
-          <Download imgSrc={originalSrc} />
+          <Download img={original} />
         </div>
       </div>
       <div to={`/${id}/`} className={styles.imageWrapper}>
@@ -50,7 +49,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
       </div>
       <div className={styles.detail}>
         <Description />
-        <Download imgSrc={originalSrc} />
+        <Download img={original} />
       </div>
     </div>
   );

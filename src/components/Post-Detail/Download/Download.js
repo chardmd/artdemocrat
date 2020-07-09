@@ -5,11 +5,13 @@ import { Button } from "react-bootstrap";
 
 import styles from "./Download.module.scss";
 
-const Description = ({ imgSrc }) => (
+const Description = ({ img }) => (
   <div className={styles.download}>
-    <div className={styles.mainText}>Standard, 2286 x 2756px</div>
+    <div className={styles.mainText}>
+      Standard, {img.width} x {img.height}
+    </div>
     <div className={styles.subText}>JPG, Size: 5.41 MB, 300dpi</div>
-    <Button href={imgSrc} variant="outline-success" size="sm" download>
+    <Button href={img.src} variant="outline-success" size="sm" download>
       Download
     </Button>
   </div>
