@@ -58,11 +58,13 @@ export const pageQuery = graphql`
         }
       }
       originalImage: image {
+        ext
+        prettySize
         childImageSharp {
           original {
+            height
             src
             width
-            height
           }
         }
       }
