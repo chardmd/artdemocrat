@@ -1,4 +1,3 @@
-// @flow strict
 import React from "react";
 import Layout from "../layouts"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
 
