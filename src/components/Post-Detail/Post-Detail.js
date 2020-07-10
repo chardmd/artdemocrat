@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import Userbar from "./Userbar";
 import Description from "./Description";
 import Download from "./Download";
+import Share from "../Share";
 
 import styles from "./Post-Detail.module.scss";
 
@@ -15,6 +16,7 @@ const PostDetail = ({ collectionDetail, artist }) => {
     description,
     id,
     title,
+    fields: { collectionSlug },
   } = collectionDetail;
   const { big } = bigImage.childImageSharp;
 
@@ -30,6 +32,11 @@ const PostDetail = ({ collectionDetail, artist }) => {
     <div onClick={(e) => e.stopPropagation()} className={styles.postDetail}>
       <div className={styles.mainWrapper}>
         <Userbar avatar={authorAvatar} title={title} />
+        <Share
+          slug={collectionSlug}
+          title={title}
+          options={{ size: 28, round: true }}
+        />
         <div className={styles.detailWrapper}>
           <Description
             authorName={authorName}

@@ -39,6 +39,7 @@
     "react-gravatar": "^2.6.3",
     "react-helmet": "^6.1.0",
     "react-icons": "^2.2.7",
+    "react-share": "^4.2.1",
     "react-slick": "^0.26.1",
     "react-typography": "^0.16.19",
     "request": "^2.88.2",
