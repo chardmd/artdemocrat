@@ -22,9 +22,9 @@ class Gallery extends React.Component {
     if (typeof window !== "undefined") {
       postsToShow = window.postsToShow;
     }
-
+    const originalCollection = !isNil(props.collection) ? props.collection : [];
     this.state = {
-      shuffledCollection: shuffle(props.collection),
+      shuffledCollection: shuffle(originalCollection),
       showingMore: postsToShow > POST_TO_SHOW,
       postsToShow,
     };
