@@ -1,7 +1,16 @@
+const path = require("path");
 const createPostsPages = require("./build-pages/create-post-pages");
 const createArtistPages = require("./build-pages/create-artist-pages");
 
 const createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+
+  // 404
+  createPage({
+    path: "/404",
+    component: path.resolve("./src/templates/not-found-template.js"),
+  });
+
   // create post pages
   await createPostsPages({ graphql, actions, reporter });
 
