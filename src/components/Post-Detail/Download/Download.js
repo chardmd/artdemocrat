@@ -1,4 +1,5 @@
 import React from "react";
+import upperCase from "lodash/upperCase";
 
 // react-bootstrap
 import { Button } from "react-bootstrap";
@@ -17,7 +18,7 @@ const Description = ({ originalImage }) => {
         Standard, {original.width} x {original.height}
       </div>
       <div className={styles.subText}>
-        {ext}, Size: {prettySize}, 300dpi
+        {upperCase(ext)}, Size: {prettySize}, 300dpi
       </div>
       <Button href={original.src} variant="outline-success" size="sm" download>
         Download
