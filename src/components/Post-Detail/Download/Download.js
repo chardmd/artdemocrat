@@ -15,7 +15,7 @@ const Description = ({ originalImage }) => {
   return (
     <div className={styles.download}>
       <div className={styles.mainText}>
-        Standard, {original.width} x {original.height}
+        Max Size, {original.width} x {original.height}
       </div>
       <div className={styles.subText}>
         {upperCase(ext)}, Size: {prettySize}, 300dpi
