@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import useSiteMetadata from "../../hooks/use-site-metadata";
 
@@ -8,6 +9,12 @@ const Footer = () => {
   const siteMetadata = useSiteMetadata();
   return (
     <footer className={styles.footer}>
+      <p>
+        <div>
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
+        </div>
+      </p>
       <p>{siteMetadata.copyright}</p>
     </footer>
   );
