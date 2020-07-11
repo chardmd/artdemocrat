@@ -92,7 +92,9 @@ class CustomModal extends React.Component {
           }
           return (
             <div
-              onClick={() => navigate(this.props.closeTo)}
+              onClick={() =>
+                navigate(this.props.closeTo, { state: { noScroll: true } })
+              }
               className={styles.ModuleModal}
             >
               <div className={styles.wrapperBody}>
@@ -107,7 +109,9 @@ class CustomModal extends React.Component {
                 />
               </div>
               <Close
-                onClick={() => navigate(this.props.closeTo)}
+                onClick={() =>
+                  navigate(this.props.closeTo, { state: { noScroll: true } })
+                }
                 className={styles.closeButton}
                 state={{
                   noScroll: true,
