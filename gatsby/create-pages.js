@@ -23,6 +23,24 @@ const createPages = async ({ graphql, actions, reporter }) => {
     component: path.resolve("./src/templates/about-template.js"),
   });
 
+  // Privacy
+  createPage({
+    path: "/privacy",
+    component: path.resolve("./src/templates/privacy-template.js"),
+  });
+
+  // Terms
+  createPage({
+    path: "/terms",
+    component: path.resolve("./src/templates/terms-template.js"),
+  });
+
+  // Terms
+  createPage({
+    path: "/contact",
+    component: path.resolve("./src/templates/contact-template.js"),
+  });
+
   // create post pages
   await createPostsPages({ graphql, actions, reporter });
 

@@ -11,6 +11,8 @@ const useSiteMetadata = () => {
             description
             author
             copyright
+            policyDate
+            email
           }
         }
       }
