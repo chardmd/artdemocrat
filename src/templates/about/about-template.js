@@ -1,10 +1,10 @@
 import React from "react";
 
-import SEO from "../components/SEO";
-import Page from "../components/Page";
-import Layout from "../layouts";
+import SEO from "../../components/SEO";
+import Page from "../../components/Page";
+import Layout from "../../layouts";
 
-import styles from "./About.module.scss";
+import styles from "./about-template.module.scss";
 
 const About = ({ location }) => (
   <Layout location={location}>
