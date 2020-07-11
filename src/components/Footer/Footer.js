@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        <div>
+        <div className={styles.wrapper}>
           <Link to="/privacy">Privacy</Link>
           <Link to="/terms">Terms</Link>
           <Link to="/contact">Contact</Link>
