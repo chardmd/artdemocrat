@@ -1,6 +1,6 @@
-# Gatsby Bootstrap
+# Art Democrat
 
-Custom starter template for building niche sites.
+Classic free domain images
 
 ## Author
 
