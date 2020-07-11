@@ -11,6 +11,12 @@ const createPages = async ({ graphql, actions, reporter }) => {
     component: path.resolve("./src/templates/not-found-template.js"),
   });
 
+  // About
+  createPage({
+    path: "/about",
+    component: path.resolve("./src/templates/about/about-template.js"),
+  });
+
   // create post pages
   await createPostsPages({ graphql, actions, reporter });
 
