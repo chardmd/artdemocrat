@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from "react";
 // react-bootstrap
 import { Container } from "react-bootstrap";
 
+import styles from "./Page.module.scss";
+
 const Page = ({ title, children }) => {
   const pageRef = useRef();
 
@@ -12,7 +14,7 @@ const Page = ({ title, children }) => {
 
   return (
     <Container ref={pageRef}>
-      <div>
+      <div className={styles.page}>
         {title && <h1>{title}</h1>}
         <div>{children}</div>
       </div>

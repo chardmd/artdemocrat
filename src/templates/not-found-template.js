@@ -1,6 +1,6 @@
 import React from "react";
 import Page from "../components/Page";
-import Layout from "../layouts"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
+import Layout from "../components/Layout"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
 
 const NotFoundTemplate = ({ location }) => (
   <Layout location={location}>

@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 
 import Gallery from "../components/Gallery";
 import SEO from "../components/SEO";
-import Layout from "../layouts"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
+import Layout from "../components/Layout"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
 
 const ArtistTemplate = ({ data, location }) => {
   const { artist } = data;
