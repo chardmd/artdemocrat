@@ -20,6 +20,6 @@
       }
     ]
   },
-  "ignoreFiles": ["node_modules/*", "src/assets/**"],
+  "ignoreFiles": ["node_modules/*", "src/styles/**"],
   "defaultSeverity": "error"
 }
