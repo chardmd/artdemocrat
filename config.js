@@ -5,8 +5,8 @@ module.exports = {
   description: "Starter template for building niche sites",
   siteUrl: "https://artdemocrat.com",
   author: "Richard Dimalanta",
-  copyright: "2020 © All rights reserved.",
+  copyright: "2020 © All Rights Reserved",
   googleAnalyticsId: "UA-168810586-1",
   policyDate: "18 July 2020.",
-  email: "hello@charmd.com",
+  email: "hello@artdemocrat.com",
 };
