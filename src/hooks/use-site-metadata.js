@@ -12,6 +12,7 @@ const useSiteMetadata = () => {
             author
             copyright
             policyDate
+            email
           }
         }
       }

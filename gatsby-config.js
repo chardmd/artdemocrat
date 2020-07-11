@@ -11,6 +11,7 @@ module.exports = {
     author: siteConfig.author,
     copyright: siteConfig.copyright,
     policyDate: siteConfig.policyDate,
+    email: siteConfig.email,
   },
   plugins: [
     /*

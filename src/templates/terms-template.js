@@ -20,8 +20,8 @@ const Terms = ({ location }) => {
           <Col lg={12}>
             <Card className="border-0">
               <Card.Body>
-                <div class="blog_body">
-                  <h3 class="text-dark">1. Terms</h3>
+                <div className="blog_body">
+                  <h3 className="text-dark">1. Terms</h3>
                   <p>
                     By accessing the website at{" "}
                     <Link to="/">{siteMetadata.siteUrl}</Link>, you are agreeing
@@ -33,7 +33,7 @@ const Terms = ({ location }) => {
                     website are protected by applicable copyright and trademark
                     law.
                   </p>
-                  <h3 class="text-dark">2. Use License</h3>
+                  <h3 className="text-dark">2. Use License</h3>
                   <ol>
                     <li>
                       Permission is granted to temporarily download one copy of
@@ -71,7 +71,7 @@ const Terms = ({ location }) => {
                       possession whether in electronic or printed format.
                     </li>
                   </ol>
-                  <h3 class="text-dark">3. Disclaimer</h3>
+                  <h3 className="text-dark">3. Disclaimer</h3>
                   <ol>
                     <li>
                       The materials on {siteMetadata.title}' website are
@@ -91,7 +91,7 @@ const Terms = ({ location }) => {
                       linked to this site.
                     </li>
                   </ol>
-                  <h3 class="text-dark">4. Limitations</h3>
+                  <h3 className="text-dark">4. Limitations</h3>
                   <p>
                     In no event shall {siteMetadata.title} or its suppliers be
                     liable for any damages (including, without limitation,
@@ -106,7 +106,7 @@ const Terms = ({ location }) => {
                     consequential or incidental damages, these limitations may
                     not apply to you.
                   </p>
-                  <h3 class="text-dark">5. Accuracy of materials</h3>
+                  <h3 className="text-dark">5. Accuracy of materials</h3>
                   <p>
                     The materials appearing on {siteMetadata.title}' website
                     could include technical, typographical, or photographic
@@ -120,7 +120,7 @@ const Terms = ({ location }) => {
                     }{" "}
                     does not make any commitment to update the materials.
                   </p>
-                  <h3 class="text-dark">6. Links</h3>
+                  <h3 className="text-dark">6. Links</h3>
                   <p>
                     {siteMetadata.title} has not reviewed all of the sites
                     linked to its website and is not responsible for the
@@ -129,14 +129,14 @@ const Terms = ({ location }) => {
                     site. Use of any such linked website is at the user's own
                     risk.
                   </p>
-                  <h3 class="text-dark">7. Modifications</h3>
+                  <h3 className="text-dark">7. Modifications</h3>
                   <p>
                     {siteMetadata.title} may revise these terms of service for
                     its website at any time without notice. By using this
                     website you are agreeing to be bound by the then current
                     version of these terms of service.
                   </p>
-                  <h3 class="text-dark">8. Governing Law</h3>
+                  <h3 className="text-dark">8. Governing Law</h3>
                   <p>
                     These terms and conditions are governed by and construed in
                     accordance with the laws of Australia and you irrevocably

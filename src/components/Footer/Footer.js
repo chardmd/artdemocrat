@@ -13,6 +13,7 @@ const Footer = () => {
         <div>
           <Link to="/privacy">Privacy</Link>
           <Link to="/terms">Terms</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </p>
       <p>{siteMetadata.copyright}</p>

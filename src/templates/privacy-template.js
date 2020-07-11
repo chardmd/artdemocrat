@@ -21,7 +21,7 @@ const Privacy = ({ location }) => {
             <Card className="border-0">
               <Card.Body>
                 <p>
-                  <h4 class="text-dark">
+                  <h4 className="text-dark">
                     Your privacy is important to us. It is {siteMetadata.title}'
                     policy to respect your privacy regarding any information we
                     may collect from you across our website,&nbsp;
