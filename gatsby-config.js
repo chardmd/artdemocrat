@@ -10,6 +10,7 @@ module.exports = {
     description: siteConfig.description,
     author: siteConfig.author,
     copyright: siteConfig.copyright,
+    policyDate: siteConfig.policyDate,
   },
   plugins: [
     /*
