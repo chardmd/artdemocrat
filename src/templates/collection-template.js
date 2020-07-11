@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 import PostDetail from "../components/Post-Detail";
 import SEO from "../components/SEO";
 
-import Layout from "../layouts"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
+import Layout from "../components/Layout"; // layout should be the last one, to prevent the 'conflicting order' warning during 'yarn run build'
 
 const propTypes = {
   data: PropTypes.shape({

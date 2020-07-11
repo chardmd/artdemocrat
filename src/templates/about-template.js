@@ -2,7 +2,7 @@ import React from "react";
 
 import SEO from "../components/SEO";
 import Page from "../components/Page";
-import Layout from "../layouts";
+import Layout from "../components/Layout";
 
 const About = ({ location }) => (
   <Layout location={location}>

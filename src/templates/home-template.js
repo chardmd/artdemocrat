@@ -8,7 +8,7 @@ import Carousel from "../components/Carousel";
 import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
 import SEO from "../components/SEO";
-import Layout from "../layouts";
+import Layout from "../components/Layout";
 
 const Index = ({ location, data }) => {
   const { allCollectionJson } = data;

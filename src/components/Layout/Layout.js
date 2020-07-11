@@ -5,9 +5,9 @@ import { ModalRoutingContext } from "gatsby-plugin-modal-routing";
 // Load the css for the Lora font.
 import "typeface-lora";
 
-import CustomModal from "../components/Modal";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+import CustomModal from "../Modal";
+import Navigation from "../Navigation";
+import Footer from "../Footer";
 
 import styles from "./Layout.module.scss";
 
