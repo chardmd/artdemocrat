@@ -20,7 +20,7 @@ const createPages = async ({ graphql, actions, reporter }) => {
   // About
   createPage({
     path: "/about",
-    component: path.resolve("./src/templates/about/about-template.js"),
+    component: path.resolve("./src/templates/about-template.js"),
   });
 
   // create post pages
