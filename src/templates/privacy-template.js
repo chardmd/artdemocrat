@@ -10,7 +10,7 @@ import Layout from "../components/Layout";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
 
-const About = ({ location }) => {
+const Privacy = ({ location }) => {
   const siteMetadata = useSiteMetadata();
   return (
     <Layout location={location}>
@@ -74,4 +74,4 @@ const About = ({ location }) => {
     </Layout>
   );
 };
-export default About;
+export default Privacy;
