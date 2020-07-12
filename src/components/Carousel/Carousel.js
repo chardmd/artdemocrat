@@ -80,7 +80,7 @@ const Carousel = () => {
                 <div className={styles.imageWrapper}>
                   <Img fluid={{ ...small }} className="rounded-circle mb-2" />
                 </div>
-                <div className="text-muted text-center p-0 mb-1">
+                <div className="text-center p-0 mb-1">
                   <Link to={fields.artistSlug} className={styles.artistLink}>
                     See {totalCount} Items
                   </Link>
