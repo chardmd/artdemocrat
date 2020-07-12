@@ -45,7 +45,7 @@
     "request": "^2.88.2",
     "slick-carousel": "^1.8.1",
     "slug": "^0.9.4",
-    "typeface-lora": "^0.0.72",
+    "typeface-lato": "^0.0.75",
     "typography": "^0.16.19"
   },
   "keywords": [

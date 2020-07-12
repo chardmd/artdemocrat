@@ -13,7 +13,7 @@ const Navigation = () => {
   const siteMetadata = useSiteMetadata();
   return (
     <header>
-      <Navbar expand="md" bg="dark" variant="dark" fixed="top">
+      <Navbar expand="md" bg="primary" variant="dark" fixed="top">
         <Container>
           <Link to="/" className="_link-no-style">
             <h1>
