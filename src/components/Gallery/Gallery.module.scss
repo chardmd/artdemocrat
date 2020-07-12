@@ -1,18 +1,9 @@
 @import "../../styles/variables";
 
-.gallery {
+.loadMoreWrapper {
   display: flex;
-  align-items: stretch;
-  flex-shrink: 0;
-  flex-direction: column;
-}
-
-.wrapper {
-  display: flex;
-  align-items: stretch;
-  flex-shrink: 0;
-  flex-direction: row;
-  margin-bottom: $base-line-height * (1 / 8);
+  justify-content: center;
+  width: 100%;
 }
 
 .loadMore {
@@ -24,6 +15,7 @@
   color: blue;
   cursor: pointer;
   margin: 0 auto;
+  width: 100%;
   padding: $base-line-height * (1 / 2);
   margin-left: $base-line-height * 0.5;
   margin-right: $base-line-height * 0.5;

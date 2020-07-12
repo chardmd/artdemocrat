@@ -9,13 +9,11 @@ const Footer = () => {
   const siteMetadata = useSiteMetadata();
   return (
     <footer className={styles.footer}>
-      <p>
-        <div className={styles.wrapper}>
-          <Link to="/privacy">Privacy</Link>
-          <Link to="/terms">Terms</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      </p>
+      <div className={styles.wrapper}>
+        <Link to="/privacy">Privacy</Link>
+        <Link to="/terms">Terms</Link>
+        <Link to="/contact">Contact</Link>
+      </div>
       <p>{siteMetadata.copyright}</p>
     </footer>
   );
