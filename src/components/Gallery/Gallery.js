@@ -4,6 +4,7 @@ import isNil from "lodash/isNil";
 import React from "react";
 
 import PostItem from "../PostItem";
+import shuffle from "../../utils/shuffle";
 
 import styles from "./Gallery.module.scss";
 
@@ -15,14 +16,15 @@ if (typeof window !== "undefined") {
 }
 
 class Gallery extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     let postsToShow = POST_TO_SHOW;
     if (typeof window !== "undefined") {
       postsToShow = window.postsToShow;
     }
-
+    const originalCollection = !isNil(props.collection) ? props.collection : [];
     this.state = {
+      shuffledCollection: shuffle(originalCollection),
       showingMore: postsToShow > POST_TO_SHOW,
       postsToShow,
     };
@@ -32,7 +34,12 @@ class Gallery extends React.Component {
     const distanceToBottom =
       document.documentElement.offsetHeight -
       (window.scrollY + window.innerHeight);
-    if (this.state.showingMore && distanceToBottom < 100) {
+    if (
+      this.state.showingMore &&
+      distanceToBottom < 100 &&
+      // prevent any render, once all the post has been shown
+      this.state.postsToShow <= this.state.shuffledCollection.length
+    ) {
       this.setState({ postsToShow: this.state.postsToShow + POST_TO_SHOW });
     }
     this.ticking = false;
@@ -55,17 +62,17 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { collection } = this.props;
+    const { shuffledCollection } = this.state;
 
     // check if collection is null
-    if (isNil(collection)) {
+    if (isNil(shuffledCollection)) {
       return [];
     }
 
     return (
       <div className={styles.gallery}>
         {/* posts */}
-        {chunk(collection.slice(0, this.state.postsToShow), 3).map(
+        {chunk(shuffledCollection.slice(0, this.state.postsToShow), 3).map(
           (chunk, i) => (
             <div key={`chunk-${i}`} className={styles.wrapper}>
               {chunk.map((node) => (
@@ -78,7 +85,7 @@ class Gallery extends React.Component {
             </div>
           )
         )}
-        {!this.state.showingMore && collection.length >= POST_TO_SHOW && (
+        {!this.state.showingMore && shuffledCollection.length >= POST_TO_SHOW && (
           <a
             className={styles.loadMore}
             onClick={() => {
